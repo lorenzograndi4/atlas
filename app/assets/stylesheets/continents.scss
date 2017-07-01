@@ -1,3 +1,33 @@
 // Place all the styles related to the continents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://bootswatch.com/journal/bootstrap.min.css');
+
+h1 {
+
+}
+
+body {
+  width: 940px;
+  margin: 0 auto;
+
+}
+
+ul.country {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 940px;
+  margin: 20px auto;
+  list-style-type: none;
+  margin-left: 50px;
+}
+
+img {
+  width: 300px;
+  height: 180px;
+}
+
+ul.country li {
+  padding: 20px;
+  width: calc(100%/2 - 40px);
+}
