@@ -39,6 +39,8 @@ class ContinentsController < ApplicationController
 
   private
 
-  @continent_params = params.require(:continent).permit(:name, :image_url)
-  
+  def continent_params
+    params.require(:continent).permit(:name, :image_url)
+  end
+
 end
