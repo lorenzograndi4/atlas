@@ -18,18 +18,41 @@ body {
 a {
   color:black;
   font-size: 20px;
+  text-decoration: none;
+
+}
+.button a {
+  color: white;
+}
+a:hover {
+  color:black;
+  font-size: 20px;
 }
 
 .banner {
   background-color: grey;
   height: 80px;
-  text-align: center;
   margin-bottom: 20px;
 }
 
 .container {
   width: 940px;
   margin: 0 auto;
+}
+
+.button {
+  color: white;
+  background-color: #96a5bc;
+  padding: 7px;
+  width: 80px;
+  border-radius: 4px;
+  margin-top: 3px;
+  margin-left: 2px;
+  display: inline-block;
+  text-align: center;
+}
+.button:hover {
+  background-color: #8190ab;
 }
 
 ul {
@@ -51,5 +74,6 @@ img {
 
 ul.country li {
   padding: 20px;
+  margin: 2px;
   width: calc(100%/2 - 40px);
 }
