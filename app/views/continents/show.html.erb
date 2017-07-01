@@ -1,0 +1,13 @@
+<h1><%= @continent.name %></h1>
+<%= link_to "Back to Atlas", root_path %>
+<ul>
+  <% @continent.countries.each do |country|%>
+    <li>
+      <%= link_to country.name, continent_path %>
+      <%=image_tag country.flag_url%>
+      <%= link_to "Edit", edit_continent_path %>
+      <%= link_to "Delete", delete_continent_path %>
+
+    </li>
+  <% end %>
+</ul>
