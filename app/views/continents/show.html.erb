@@ -18,10 +18,10 @@
         <%=image_tag country.flag_url%>
         <br>
 
+    <div class="button"> <%= link_to 'Edit', edit_country_path(country.id) %></div >
+    <div class="button"> <%= link_to "Delete", continent_path, method: :delete, data: {confirm: "Are you really really sure?"} %> </div >
 
-        <%= link_to 'Edit', edit_country_path(country.id) %>
       </li>
-
     <% end %>
 
   </ul>

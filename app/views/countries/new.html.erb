@@ -1,19 +1,29 @@
-<h1>New Country</h1>
+<div class="container">
+  <h1>Atlas</h1>
+</div>
 
-<%= form_for @country do |f| %>
+<div class="banner">
+  <div class="container">
+    <h2>Add new country</h2>
+  </div>
+</div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="container">
+  <%= form_for @country do |f| %>
 
-  <%= f.label :population %>
-  <%= f.number_field :population %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-  <%= f.label :flag %>
-  <%= f.text_field :flag_url %>
+    <%= f.label :population %>
+    <%= f.number_field :population %>
 
-  <%= f.label :continent_id %>
-  <%= f.collection_select(:continent_id, Continent.all, :id, :name) %>
+    <%= f.label :flag %>
+    <%= f.text_field :flag_url %>
 
-  <%= f.submit (@country.new_record? ? "Create" : "Update") %>
+    <%= f.label :continent_id %>
+    <%= f.collection_select(:continent_id, Continent.all, :id, :name) %>
 
-<% end %>
+    <%= f.submit (@country.new_record? ? "Create" : "Update") %>
+
+  <% end %>
+</div>
