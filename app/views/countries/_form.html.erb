@@ -1,0 +1,17 @@
+<%= form_for @country do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :population %>
+  <%= f.number_field :population %>
+
+  <%= f.label :flag %>
+  <%= f.text_field :flag_url %>
+
+  <%= f.label :continent %>
+  <%= f.text_field :continent_id %>
+
+  <%= f.submit (@country.new_record? ? "Create" : "Update") %>
+
+<% end %>

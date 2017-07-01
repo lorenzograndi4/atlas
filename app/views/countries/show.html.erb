@@ -5,3 +5,7 @@
 <p> Language: <%= @country.language %> </p>
 
 <p> Continent:<%= @country.continent_id%> </p>
+
+<hr>
+
+<%= link_to "[Edit]", edit_country_path(@country.id) %>
