@@ -11,8 +11,8 @@
   <%= f.label :flag %>
   <%= f.text_field :flag_url %>
 
-  <%= f.label :continent %>
-  <%= f.text_field :continent_id %>
+  <%= f.label :continent_id %>
+  <%= f.collection_select(:continent_id, Continent.all, :id, :name) %>
 
   <%= f.submit (@country.new_record? ? "Create" : "Update") %>
 
