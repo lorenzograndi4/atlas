@@ -1,18 +1,29 @@
-<h1><%= @continent.name %></h1>
-<%= link_to "Back to Atlas", root_path %>
-<ul class="country">
-  <% @continent.countries.each do |country|%>
-    <li>
-      <%= link_to country.name, continent_path %>
-      <br>
-      <%=image_tag country.flag_url%>
-      <br>
+<div class="container">
+  <h1>Atlas</h1>
+</div>
 
-      <%= link_to "Edit", edit_continent_path %>
-      <%= link_to "Delete", delete_continent_path %>
-    </li>
+<div class="banner">
+  <div class="container">
+    <h2><%= @continent.name %></h2>
+  </div>
+</div>
 
-  <% end %>
-</ul>
+<div class="container">
+  <%= link_to "Back to Atlas", root_path %>
+  <ul class="country">
+    <% @continent.countries.each do |country|%>
+      <li>
+        <%= link_to country.name, continent_path %>
+        <br>
+        <%=image_tag country.flag_url%>
+        <br>
 
+        <%= link_to "Edit", edit_continent_path %>
+        <%= link_to "Delete", delete_continent_path %>
+      </li>
+
+    <% end %>
+
+  </ul>
+</div>
 <!-- add country link -->
