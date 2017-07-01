@@ -17,7 +17,7 @@ class ContinentsController < ApplicationController
   end
 
   def create
-    @continent = Continent.new(params.require(:continent).permit(:name))
+    @continent = Continent.new(continent_params)
 
     if @continent.save
       redirect_to @continent
@@ -27,17 +27,25 @@ class ContinentsController < ApplicationController
   end
 
   def update
-  @continent = Continent.find(params[:id])
-  if @continent.update_attributes(params.require(:continent).permit(:name))
-    redirect_to @continent
-  else
-    render 'edit'
-  end
-end
+    @continent = Continent.find(params[:id])
 
-def destroy
-  @continent = Continent.find(params[:id])
-  @continent.destroy
-  redirect_to root_path
-end
+    if @continent.update_attributes(continent_params)
+       redirect_to @continent
+    else
+       render 'edit'
+    end
+  end
+
+  def delete
+    @continent = Continent.find(params[:id])
+    @continent.destroy
+    redirect_to  continent_path
+  end
+
+  private
+
+  def continent_params
+    params.require(:continent).permit(:name, :image_url)
+  end
+
 end

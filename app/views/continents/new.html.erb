@@ -1,8 +1,3 @@
-<h1>Create a new continent (?!)</h1>
+<%= render "form", continent: @continent %>
 
-<%= form_for @continent do |c| %>
-  <%= c.label :name %>
-  <%= c.text_field :name %>
-  <%= c.submit ("Create") %>
-
-<% end%>
+<%= link_to 'Back', continents_path %>
