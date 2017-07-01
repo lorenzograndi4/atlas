@@ -1,14 +1,23 @@
-<h1>Atlas</h1>
+<div class="container">
+  <h1>Atlas</h1>
+</div>
 
-<h2>Continents</h2>
+<div class="banner">
+  <div class="container">
+    <h2>Continents</h2>
+  </div>
+</div>
 
-<ul>
-  <% @continents.each do |continent|%>
-    <li>
-      <%= link_to continent.name, continent_path(continent.id)%>
+
+<div class="container">
+  <ul>
+    <% @continents.each do |continent|%>
+      <li>
+        <%= link_to continent.name, continent_path(continent.id)%>
       <!-- <%= link_to "Edit", edit_continent_path(continent.id)%> -->
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to "[New continent]", new_continent_path %>
+      </li>
+    <% end %>
+  </ul>
+<br>
+  <%= link_to "[New continent]", new_continent_path %>
+</div>
