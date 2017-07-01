@@ -3,7 +3,7 @@
 <ul>
   <% @continent.countries.each do |country|%>
     <li>
-      <%= link_to country.name, continent_path %>
+      <%= link_to country.name, country_path(country.id) %>
       <%=image_tag country.flag_url%>
       <%= link_to "Edit", edit_continent_path %>
       <%= link_to "Delete", delete_continent_path %>
