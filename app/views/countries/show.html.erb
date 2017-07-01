@@ -9,3 +9,4 @@
 <hr>
 
 <%= link_to "[Edit]", edit_country_path(@country.id) %>
+<%= link_to "[Delete]", country_path, method: :delete, data: {confirm: "Are you really sure?"} %>
