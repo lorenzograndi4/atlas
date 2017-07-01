@@ -1,12 +1,22 @@
-<h1><%= @country.name %></h1>
+<div class="container">
+  <h1>Atlas</h1>
+</div>
 
-<%= image_tag @country.flag_url %>
-<p> Population: <%= @country.population %> </p>
-<p> Language: <%= @country.language %> </p>
+<div class="banner">
+  <div class="container">
+    <h2><%= @country.name %></h2>
+  </div>
+</div>
 
-<p> Continent:<%= @country.continent[:name] %> </p>
+<div class="container">
+  <%= image_tag @country.flag_url %>
+  <p> Population: <%= @country.population %> </p>
+  <p> Language: <%= @country.language %> </p>
 
-<hr>
+  <p> Continent:<%= @country.continent[:name] %> </p>
 
-<%= link_to "[Edit]", edit_country_path(@country.id) %>
-<%= link_to "[Delete]", country_path, method: :delete, data: {confirm: "Are you really sure?"} %>
+  <hr>
+
+  <%= link_to "[Edit]", edit_country_path(@country.id) %>
+  <%= link_to "[Delete]", country_path, method: :delete, data: {confirm: "Are you really sure?"} %>
+</div>
