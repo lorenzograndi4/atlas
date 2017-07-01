@@ -1,8 +1,8 @@
 <h1>Create a new continent (?!)</h1>
 
 <%= form_for @continent do |c| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit ("Create") %>
-  
-<%= end%>
+  <%= c.label :name %>
+  <%= c.text_field :name %>
+  <%= c.submit ("Create") %>
+
+<% end%>
