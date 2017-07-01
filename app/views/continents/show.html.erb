@@ -13,7 +13,7 @@
   <ul class="country">
     <% @continent.countries.each do |country|%>
       <li>
-        <%= link_to country.name, continent_path %>
+        <%= link_to country.name, country_path(country.id) %>
         <br>
         <%=image_tag country.flag_url%>
         <br>
