@@ -13,7 +13,12 @@ class ContinentsController < ApplicationController
   end
 
   def edit
+    @continent = Continent.find(params[:id])
+  end
+
+  def create
     @continent = Continent.new(continent_params)
+
     if @continent.save
       redirect_to @continent
     else

@@ -6,6 +6,7 @@
   <% @continents.each do |continent|%>
     <li>
       <%= link_to continent.name, continent_path(continent.id)%>
+      <%= link_to "Edit", edit_continent_path(continent.id)%>
     </li>
   <% end %>
 </ul>
