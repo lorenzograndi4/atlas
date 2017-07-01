@@ -45,7 +45,7 @@ class ContinentsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @continent = Continent.find(params[:id])
     @continent.destroy
     redirect_to  continent_path
