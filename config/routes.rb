@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root "continents#index"
+  resources :continents
 
+  # root "continents#index"
   # get "continents" => "continents#index"
 
-  resources :continents
 end

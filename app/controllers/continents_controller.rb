@@ -4,7 +4,20 @@ class ContinentsController < ApplicationController
   end
 
   def show
-    @continent = Continent.find_by(params[:id])
-    @countries = @continent.all.order(:name)
+    @continent = Continent.find(params[:id])
+
+  end
+
+  def new
+    @continent = Continent.new
+  end
+
+  def edit
+    @continent = Continent.new(continent_params)
+    if @continent.save
+      redirect_to @continent
+    else
+      render 'edit'
+    end
   end
 end

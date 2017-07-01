@@ -5,7 +5,7 @@
 <ul>
   <% @continents.each do |continent|%>
     <li>
-      <%= link_to continent.name, continents_path(continent.id)%>
+      <%= link_to continent.name, continent_path(continent.id)%>
     </li>
   <% end %>
 </ul>

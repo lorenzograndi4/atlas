@@ -1,9 +1,10 @@
 <h1><%= @continent.name %></h1>
 
 <ul>
-  <% @countries.each do |country|%>
+  <% @continent.countries.each do |country|%>
     <li>
-      <%=country.name%>
+      <%= link_to country.name, continent_path %>
+      <%=image_tag country.flag_url%>
     </li>
   <% end %>
 </ul>
