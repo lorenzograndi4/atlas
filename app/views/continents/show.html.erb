@@ -9,7 +9,6 @@
 </div>
 
 <div class="container">
-  <%= link_to "Back to Atlas", root_path %>
   <ul class="country">
     <% @continent.countries.each do |country|%>
       <li>
@@ -18,9 +17,8 @@
         <%=image_tag country.flag_url%>
         <br>
 
-        <%= link_to 'Back', continents_path %>
-        <%= link_to 'Edit', edit_continent_path %>
-        <%= link_to "Delete", continent_path, method: :delete, data: {confirm: "Are you really really sure?"} %>
+
+        <%= link_to 'Edit', edit_country_path %>
       </li>
 
     <% end %>
